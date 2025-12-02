@@ -50,21 +50,21 @@ while (firstPlayerPoints < 3 && secondPlayerPoints < 3)
     {
         Console.WriteLine("First player won!");
         //firstPlayerPoints = firstPlayerPoints + 1;
-        firstPlayerPoints++;
+            firstPlayerPoints++;
         //firstPlayerPoints =+ 1;
     }
     else
     {
         Console.WriteLine("Second player won!");
         //secondPlayerPoints = secondPlayerPoints +1;
-        secondPlayerPoints++;
+            secondPlayerPoints++;
         //secondPlayerPoints =+ 1;
     }
 
     Console.WriteLine($"First player: {firstPlayerPoints}");
     Console.WriteLine($"Second player: {secondPlayerPoints}");
 
-    if(!(firstPlayerPoints < 3 && secondPlayerPoints < 3))
+    if(!(firstPlayerPoints >= 3 || secondPlayerPoints >= 3))
     {
         break;
     }
