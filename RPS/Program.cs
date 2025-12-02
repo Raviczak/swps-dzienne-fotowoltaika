@@ -27,7 +27,7 @@ int firstPlayerPoints = 0;
 int secondPlayerPoints = 0;
 
 
-while (true)
+while (firstPlayerPoints < 3 && secondPlayerPoints < 3)
 {
     Console.WriteLine("Let's play Rock-Paper-Scissors!");
 
@@ -50,17 +50,22 @@ while (true)
     {
         Console.WriteLine("First player won!");
         //firstPlayerPoints = firstPlayerPoints + 1;
-        //firstPlayerPoints++;
-        firstPlayerPoints=+ 1;
+        firstPlayerPoints++;
+        //firstPlayerPoints =+ 1;
     }
     else
     {
         Console.WriteLine("Second player won!");
         //secondPlayerPoints = secondPlayerPoints +1;
-        //firstPlayerPoints++;
-        secondPlayerPoints=+ 1;
+        secondPlayerPoints++;
+        //secondPlayerPoints =+ 1;
     }
 
     Console.WriteLine($"First player: {firstPlayerPoints}");
     Console.WriteLine($"Second player: {secondPlayerPoints}");
+
+    if(!(firstPlayerPoints < 3 && secondPlayerPoints < 3))
+    {
+        break;
+    }
 }   
