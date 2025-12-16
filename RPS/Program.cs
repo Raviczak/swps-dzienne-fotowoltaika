@@ -33,6 +33,10 @@ const StringComparison stringComparison = StringComparison.OrdinalIgnoreCase;
 
 int firstPlayerPoints = 0;
 int secondPlayerPoints = 0;
+Console.WriteLine("Player 1, what's your name?");
+string firstPlayerName = Console.ReadLine()!;
+Console.WriteLine("Player 2, what's your name?");
+string secondPlayerName = Console.ReadLine()!;
 
 Console.WriteLine("How many wins?");
 string maxWinsText = Console.ReadLine()!;
@@ -50,8 +54,8 @@ while (firstPlayerPoints < maxWins && secondPlayerPoints < maxWins)
 {
     Console.WriteLine("Let's play Rock-Paper-Scissors!");
 
-    string firstSign = GetCorrectSign("Player 1"); // P1
-    string secondSign = GetCorrectSign("Player 2"); // P2
+    string firstSign = GetCorrectSign($"{firstPlayerName}"); // P1
+    string secondSign = GetCorrectSign($"{secondPlayerName}"); // P2
 
     List<string> signsLosingWithFirstSign = winningMap[firstSign];
 
@@ -77,8 +81,8 @@ while (firstPlayerPoints < maxWins && secondPlayerPoints < maxWins)
         //secondPlayerPoints =+ 1;
     }
 
-    Console.WriteLine($"First player: {firstPlayerPoints}");
-    Console.WriteLine($"Second player: {secondPlayerPoints}");
+    Console.WriteLine($"{firstPlayerName}: {firstPlayerPoints}");
+    Console.WriteLine($"{secondPlayerName}: {secondPlayerPoints}");
 
     //if(firstPlayerPoints >= maxWins || secondPlayerPoints >= maxWins)
     //{
